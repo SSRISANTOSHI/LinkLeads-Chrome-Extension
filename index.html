@@ -3,12 +3,57 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <input type="text" id="input-el">
-        <button id="input-btn">SAVE INPUT</button>
-        <button id="tab-btn">SAVE TAB</button>
-        <button id="delete-btn">DELETE ALL</button>
-        <ul id="ul-el">
-        </ul>
+        <div class="header">
+            <h2>LinkLeads Enhanced</h2>
+            <button id="theme-toggle">🌙</button>
+            <button id="settings-btn">⚙️</button>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="search-el" placeholder="Search leads...">
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="input-el" placeholder="Enter URL...">
+            <button id="input-btn">SAVE</button>
+            <button id="tab-btn">SAVE TAB</button>
+        </div>
+        
+        <div class="filters">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="documentation">Documentation</option>
+                <option value="social">Social</option>
+                <option value="shopping">Shopping</option>
+                <option value="news">News</option>
+                <option value="media">Media</option>
+                <option value="general">General</option>
+            </select>
+            <button id="bulk-select">Select All</button>
+            <button id="bulk-delete">Delete Selected</button>
+            <button id="export-btn">Export</button>
+        </div>
+        
+        <div class="stats">
+            <span id="total-count">0 leads</span>
+            <span id="broken-links">0 broken</span>
+        </div>
+        
+        <ul id="ul-el"></ul>
+        
+        <div class="actions">
+            <button id="delete-btn">DELETE ALL</button>
+            <button id="check-links">CHECK LINKS</button>
+        </div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+        
+        <script src="utils.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
